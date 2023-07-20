@@ -1,0 +1,34 @@
+
+    input{
+        font-size: x-large;
+        border-color: black;
+        text-shadow: black;
+        text-decoration-color: black;
+        
+    }
+
+    p{
+        color: white;
+        font-weight:bold;
+    }
+
+    #sub,#res{
+        background-color: rgb(72, 72, 216);
+        border-radius: 15%;
+        color: white;
+        cursor: pointer;
+        border-left: 50%;
+        
+
+    }
+    #sub{
+        margin-left: 40%;
+    }
+    #res{
+        margin-left: 3%;
+
+        }
+    #sub:hover,#res:hover{
+        background-color:rgb(44, 44, 209);
+
+    }
