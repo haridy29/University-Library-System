@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset= "utf8"/>
+    
+        <link rel="stylesheet" href="{% static 'css/updating a book.css' %}"/>
+        
+        <style>
+            body{
+             background-image:url("{% static 'img/4.jpeg' %}");
+            height:1000px;
+            background-size:100% 100%;
+            background-position:center;
+            background-repeat: no repeat;
+            }
+        </style>
+    </head>
+    
+<body>
+
+
+    <center>           
+        <h1 style="color: white;"> updating a Book</h1> 
+    </center>
+    
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <table border="10" align="center" cellpadding="15" cellspacing="15"    >
+
+            
+            <tr>
+            <td ><p>  ISBN :</p></td>
+
+            <td> <input type="text" name="isbn" size="70" value="{{books.ISBN}}"> </td>
+            
+            </tr>
+            <tr>
+
+            <td> <p> Title :</p></td>
+
+            <td> <input type="text" name="title" size="70" value={{books.Title}}> </td>
+            
+        </tr>
+            <tr>
+            <td> <p> Author :</p></td>
+            <td> <input type="text" name="author" size="70" value="{{books.Author}}"> </td>
+            </tr>
+            <tr>
+            <td> <p>Edition :</p></td>
+            <td> <input type="text" name="edition" size="70" value="{{books.Edition}}"> </td>
+            </tr>
+            <tr>
+            <td> <p> Publication: </p></td>
+            <td> <input type="text" name="publication" size="70" value="{{books.Publication}}"> </td>
+            </tr>
+            <tr>
+ 
+                <td> <p>Borrowing period: </p></td>
+ 
+                <td> <input type="text" name="Borrowing_period" size="70" onkeypress="return onlyNumberKey(event)" value="{{books.Borrowing_period}}"required> </td>
+ 
+            </tr>
+            
+            <tr>
+ 
+                <td> <p style="color: black;font-size: 25px;">Status: </p>
+                <br>    
+                    <p style="color: black;font-size: 25px;"> Upload image: </p>
+                </td>
+ 
+                <td>
+ 
+                    <p>
+                        
+                        <pre style="color: white;"><input type="radio" name="status" value="available" style="cursor:pointer;height: 20px ; width: 20px;" required> <label style="font-size: 20px;">Available</label>         <input type="radio" name="status" value="Borrowerd" style="cursor:pointer;height: 20px ; width: 20px;" required> <label style="font-size: 20px;">Borrowed</label> </pre>
+                     
+                   
+                    </p>    
+                   <pre>    </pre> <input type="file" id="Image" name="Image" value="{{books.ImageBook.url}}" required>
+                   
+                </td>
+
+            </tr>
+            
+            
+            <tr>
+            
+            <td  colspan="2">
+            <input type="submit" value="submit" id="sub">
+            <input type="reset" value="Reset" id="res">
+            </td>
+            </tr>
+        
+        
+        </table>
+
+    </form>
+</body>
+</html>
