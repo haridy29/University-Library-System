@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Lapp',#نسيت اقولها ليكي
+    'Lapp',
 ]
 
 MIDDLEWARE = [
@@ -125,7 +125,7 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS=[ # ال S مكانتش موجوده
+STATICFILES_DIRS=[ 
     os.path.join(BASE_DIR,'Library/static'),
 ]
 
